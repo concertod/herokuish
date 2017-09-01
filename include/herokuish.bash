@@ -45,16 +45,16 @@ version() {
 }
 
 title() {
-	echo $'\e[1G----->' "$@"
+	echo $'----->' "$@"
 }
 
 indent() {
 	while read -r line; do
 		if [[ "$line" == --* ]] || [[ "$line" == ==* ]]; then
 			# shellcheck disable=SC2086
-			echo $'\e[1G'$line
+			echo $line
 		else
-			echo $'\e[1G      ' "$line"
+			echo $'      ' "$line"
 		fi
 	done
 }

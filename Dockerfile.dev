@@ -1,4 +1,4 @@
-FROM heroku/cedar:14
+FROM heroku/heroku:16
 COPY ./build/linux/herokuish /bin/herokuish
 RUN /bin/herokuish buildpack install \
 	&& ln -s /bin/herokuish /build \

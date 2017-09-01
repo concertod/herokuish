@@ -1,5 +1,5 @@
-FROM heroku/cedar:14
-RUN curl "https://github.com/gliderlabs/herokuish/releases/download/v0.3.32/herokuish_0.3.32_linux_x86_64.tgz" \
+FROM heroku/heroku:16
+RUN curl "https://github.com/imjching/herokuish/releases/download/v0.3.32-imjching.1/herokuish_0.3.32-imjching.1_linux_x86_64.tgz" \
 		--silent -L | tar -xzC /bin
 RUN /bin/herokuish buildpack install \
 	&& ln -s /bin/herokuish /build \
